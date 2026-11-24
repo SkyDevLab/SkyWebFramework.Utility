@@ -10,10 +10,10 @@
 
 		<!-- NuGet Package Identity -->
 		<PackageId>SkyWebFramework.Utilities</PackageId>
-		<Version>1.1.0</Version>
-		<PackageVersion>1.1.0</PackageVersion>
-		<AssemblyVersion>1.1.0.0</AssemblyVersion>
-		<FileVersion>1.1.0.0</FileVersion>
+		<Version>1.1.1</Version>
+		<PackageVersion>1.1.1</PackageVersion>
+		<AssemblyVersion>1.1.1.0</AssemblyVersion>
+		<FileVersion>1.1.1.0</FileVersion>
 
 		<!-- Author Information -->
 		<Authors>Surya Pratap Singh</Authors>
@@ -57,6 +57,9 @@
 
 		<!-- Release Notes -->
 		<PackageReleaseNotes>
+			Version 1.1.1 - NuGet README Formatting Fix
+			- Updated README.md to pure Markdown (removed raw HTML tags and relative image paths) for clean rendering on NuGet.org.
+
 			Version 1.1.0 - Major Feature Expansion &amp; .NET 9 Support
 
 			✨ What's New in 1.1.0:

@@ -1,20 +1,14 @@
 ﻿# ⚡ SkyWebFramework.Utilities
 
-<div align="center">
-
-<img src="SkyWebFramework.png" alt="SkyWebFramework Logo" width="110" />
+[![NuGet](https://img.shields.io/nuget/v/SkyWebFramework.Utilities?style=flat-square&color=blue)](https://www.nuget.org/packages/SkyWebFramework.Utilities)
+[![Downloads](https://img.shields.io/nuget/dt/SkyWebFramework.Utilities?style=flat-square&color=green)](https://www.nuget.org/packages/SkyWebFramework.Utilities)
+[![GitHub Repository](https://img.shields.io/badge/GitHub-SkyWebFramework.Utility-181717?style=flat-square&logo=github)](https://github.com/SkyDevLab/SkyWebFramework.Utility)
+[![License: MIT](https://img.shields.io/badge/license-MIT-orange?style=flat-square)](https://github.com/SkyDevLab/SkyWebFramework.Utility/blob/main/LICENCE.txt)
+[![.NET](https://img.shields.io/badge/.NET-6.0%20%7C%207.0%20%7C%208.0%20%7C%209.0-512BD4?style=flat-square)](https://dotnet.microsoft.com/)
 
 **A comprehensive, zero-dependency .NET utility library for everyday development**
 
 *String manipulation • Date handling • Security & encryption • Collection extensions • Math & conversions • Object mapping • JSON • Enums • Async resilience • Validation*
-
-[![NuGet](https://img.shields.io/nuget/v/SkyWebFramework.Utilities?style=flat-square&color=blue)](https://www.nuget.org/packages/SkyWebFramework.Utilities)
-[![Downloads](https://img.shields.io/nuget/dt/SkyWebFramework.Utilities?style=flat-square&color=green)](https://www.nuget.org/packages/SkyWebFramework.Utilities)
-[![GitHub Repository](https://img.shields.io/badge/GitHub-SkyWebFramework.Utility-181717?style=flat-square&logo=github)](https://github.com/SkyDevLab/SkyWebFramework.Utility)
-[![License: MIT](https://img.shields.io/badge/license-MIT-orange?style=flat-square)](LICENCE.txt)
-[![.NET](https://img.shields.io/badge/.NET-6.0%20%7C%207.0%20%7C%208.0%20%7C%209.0-512BD4?style=flat-square)](https://dotnet.microsoft.com/)
-
-</div>
 
 ---
 
@@ -191,8 +185,7 @@ var data = await EasyAsync.RetryAsync(
 
 ## 📚 Complete API Reference
 
-<details>
-<summary><strong>🔤 EasyString Methods</strong></summary>
+### 🔤 `EasyString`
 
 | Method | Description |
 | :--- | :--- |
@@ -221,10 +214,7 @@ var data = await EasyAsync.RetryAsync(
 | `IsValidEmail` / `IsValidPhone` / `IsValidUrl` | Format validation helpers |
 | `GenerateRandomString(int, string)` | Thread-safe random string generator |
 
-</details>
-
-<details>
-<summary><strong>📅 EasyDate Methods</strong></summary>
+### 📅 `EasyDate`
 
 | Method | Description |
 | :--- | :--- |
@@ -246,10 +236,7 @@ var data = await EasyAsync.RetryAsync(
 | `FromUnixTimestamp` / `FromUnixTimestampMilliseconds` | Convert Unix epoch seconds/ms to UTC `DateTime` |
 | `IsLeapYear` / `DaysInMonth` / `NextDayOfWeek` | Calendar utilities |
 
-</details>
-
-<details>
-<summary><strong>🔐 EasySecurity Methods</strong></summary>
+### 🔐 `EasySecurity`
 
 | Method | Description |
 | :--- | :--- |
@@ -265,10 +252,7 @@ var data = await EasyAsync.RetryAsync(
 | `NewGuidString(bool)` / `IsValidGuid(string?)` | GUID generation & validation |
 | `ConstantTimeEquals(string?, string?)` | Timing-safe string equality |
 
-</details>
-
-<details>
-<summary><strong>📦 EasyCollection Methods</strong></summary>
+### 📦 `EasyCollection`
 
 | Method | Description |
 | :--- | :--- |
@@ -284,10 +268,7 @@ var data = await EasyAsync.RetryAsync(
 | `Paginate(int, int)` / `ToPagedResult(int, int)` | 1-based paging & `PagedResult<T>` metadata |
 | `GetAtOrDefault` / `WhereNotNull` / `IndexOf` | Safe indexing, non-null filtering, predicate index lookup |
 
-</details>
-
-<details>
-<summary><strong>🔢 EasyMath Methods</strong></summary>
+### 🔢 `EasyMath`
 
 | Method | Description |
 | :--- | :--- |
@@ -302,18 +283,13 @@ var data = await EasyAsync.RetryAsync(
 | `KilometersToMiles` / `MilesToKilometers` | Distance conversions |
 | `KilogramsToPounds` / `PoundsToKilograms` | Weight conversions |
 
-</details>
-
-<details>
-<summary><strong>🎯 EasyObject, 📄 EasyJson, 🏷️ EasyEnum, ⚡ EasyAsync & ✅ EasyValidation</strong></summary>
+### 🎯 `EasyObject`, 📄 `EasyJson`, 🏷️ `EasyEnum`, ⚡ `EasyAsync` & ✅ `EasyValidation`
 
 - **`EasyObject`**: `IsNull`, `IsNotNull`, `ThrowIfNull`, `OrDefault`, `IsDefault`, `DeepClone`, `MapTo`, `CopyPropertiesTo`, `ToDictionary`, `GetPropertyValue`, `TryConvert`, `ConvertTo`
 - **`EasyJson`**: `ToJson`, `FromJson`, `TryFromJson`, `IsValidJson`, `PrettifyJson`, `MinifyJson`, `MergeJson`
 - **`EasyEnum`**: `GetDescription`, `GetValues`, `GetNames`, `ToDictionary`, `ParseOrDefault`, `IsDefined`, `GetFlags`
 - **`EasyAsync`**: `RetryAsync`, `WithTimeout`, `SafeFireAndForget`, `WhenAllLimited`
 - **`EasyValidation`**: `IsValidUrl`, `IsValidIPv4`, `IsValidIPAddress`, `IsValidCreditCard`, `IsStrongPassword`, `IsAlphanumeric`, `IsNumeric`, `IsValidHexColor`, `IsValidPort`, `IsValidSlug`, `RequireNotNullOrWhiteSpace`, `RequireInRange`
-
-</details>
 
 ---
 
@@ -340,6 +316,6 @@ Contributions are welcome!
 
 ## 📄 License
 
-Licensed under the [MIT License](LICENCE.txt) — free for commercial and personal use.
+Licensed under the [MIT License](https://github.com/SkyDevLab/SkyWebFramework.Utility/blob/main/LICENCE.txt) — free for commercial and personal use.
 
 **Copyright © 2026 Surya Pratap Singh**

@@ -1,0 +1,115 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<!-- Target Multiple .NET Versions -->
+		<TargetFrameworks>net6.0;net7.0;net8.0;net9.0</TargetFrameworks>
+		<LangVersion>latest</LangVersion>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<DefaultItemExcludes>$(DefaultItemExcludes);SkyWebFramework.Utility.Tests\**</DefaultItemExcludes>
+
+		<!-- NuGet Package Identity -->
+		<PackageId>SkyWebFramework.Utilities</PackageId>
+		<Version>1.1.0</Version>
+		<PackageVersion>1.1.0</PackageVersion>
+		<AssemblyVersion>1.1.0.0</AssemblyVersion>
+		<FileVersion>1.1.0.0</FileVersion>
+
+		<!-- Author Information -->
+		<Authors>Surya Pratap Singh</Authors>
+		<Company>SkyWebFramework</Company>
+		<Product>SkyWebFramework Utilities</Product>
+		<Copyright>Copyright © 2026 Surya Pratap Singh</Copyright>
+
+		<!-- Package Description (SEO Optimized) -->
+		<Title>SkyWebFramework.Utilities - Comprehensive .NET Helper Library</Title>
+		<Description>A comprehensive, production-ready utility library for .NET providing 130+ extension methods and helpers for strings (manipulation, validation, formatting), dates (business days, quarters, Unix timestamps), collections (batching, pagination, sampling, async), security (PBKDF2, AES-256, HMAC, hashing), math &amp; unit conversions, objects (deep clone, mapping, nested property access), JSON, enums, async retry/timeout, and validation. Zero external dependencies, compatible with .NET 6.0, 7.0, 8.0, and 9.0.</Description>
+		<Summary>130+ utility and extension methods for strings, dates, collections, security, math, objects, JSON, enums, async, and validation. Zero dependencies.</Summary>
+		<PackageDescription>
+			SkyWebFramework.Utilities is an all-in-one helper library that eliminates boilerplate code and provides battle-tested static helpers and extension methods for common .NET operations across .NET 6.0, 7.0, 8.0, and 9.0. Includes EasyString, EasyDate, EasySecurity, EasyCollection, EasyMath, EasyObject, EasyJson, EasyEnum, EasyAsync, and EasyValidation with zero external runtime dependencies.
+		</PackageDescription>
+
+		<!-- SEO-Optimized Tags -->
+		<PackageTags>
+			utilities;helpers;extensions;extension-methods;utility-library;
+			string-helpers;string-extensions;string-manipulation;text-processing;
+			date-helpers;datetime-extensions;date-calculations;time-utilities;
+			collection-helpers;linq-extensions;enumerable-helpers;pagination;
+			security-helpers;cryptography;hashing;aes-encryption;pbkdf2;password-hashing;
+			math-helpers;math-utilities;unit-conversions;
+			object-extensions;reflection-helpers;mapping;deep-cloning;
+			json-helpers;enum-helpers;async-retry;validation;guard-clauses;
+			dotnet;csharp;net9;net8;net7;net6;
+			skywebframework;helper-methods;zero-dependencies
+		</PackageTags>
+
+		<!-- Project URLs -->
+		<PackageProjectUrl>https://github.com/SkyDevLab/SkyWebFramework.Utility</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/SkyDevLab/SkyWebFramework.Utility.git</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+
+		<!-- License -->
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+
+		<!-- Icon Configuration -->
+		<PackageIcon>SkyWebFramework.png</PackageIcon>
+
+		<!-- Release Notes -->
+		<PackageReleaseNotes>
+			Version 1.1.0 - Major Feature Expansion &amp; .NET 9 Support
+
+			✨ What's New in 1.1.0:
+			- Multi-targeting updated to .NET 6.0, 7.0, 8.0, and 9.0
+			- Extension-method support across EasyString, EasyDate, EasySecurity, EasyCollection, EasyMath, EasyObject, EasyJson, EasyEnum, and EasyAsync
+			- EasyString: ToSnakeCase, ToKebabCase, RemoveWhitespace, CollapseWhitespace, RemoveSpecialCharacters, StripHtml, ExtractWords, ExtractLines, WordCount, Reverse, Shuffle, Repeat, MaskEmail, EnsureStartsWith/EndsWith, NullIfEmpty/WhiteSpace, SanitizeFileName, IsValidUrl
+			- EasyDate: EndOfWeek, IsWeekend, IsBusinessDay, AddBusinessDays, SubtractBusinessDays, IsInRange, IsBetween, GetQuarter, StartOfQuarter, EndOfQuarter, StartOfYear, EndOfYear, ToUnixTimestamp(Milliseconds), FromUnixTimestamp(Milliseconds), IsLeapYear, DaysInMonth, NextDayOfWeek
+			- EasySecurity: Sha512Hash, Md5Hash, HmacSha256, HashPassword/VerifyPassword (PBKDF2), EncryptAes/DecryptAes (AES-256-CBC), ToBase64/FromBase64, ToBase64Url/FromBase64Url, NewGuidString, IsValidGuid, ConstantTimeEquals, GenerateNumericOtp
+			- EasyCollection: HasItems, SafeAny, SafeFirstOrDefault, SafeCount, OrEmpty, ForEach (with index), ForEachAsync, AddRange, AddIfNotNull, RemoveAll, Shuffle, Sample, RandomItem, Paginate, ToPagedResult (PagedResult&lt;T&gt;), GetAtOrDefault, WhereNotNull, IndexOf
+			- EasyMath: IsBetween, RoundToNearest, RoundUp, RoundDown, Min/Max params overloads, Average, Median, PercentageOf, AddPercentage, SubtractPercentage, IsEven, IsOdd, IsPrime, Factorial, Gcd, Lcm, Lerp, and temperature/distance/weight/angle unit conversions
+			- New EasyObject: IsNull, IsNotNull, ThrowIfNull, OrDefault, IsDefault, DeepClone, MapTo, CopyPropertiesTo, ToDictionary, GetPropertyValue (nested dot paths), TryConvert, ConvertTo
+			- New EasyJson: ToJson, FromJson, TryFromJson, IsValidJson, PrettifyJson, MinifyJson, MergeJson
+			- New EasyEnum: GetDescription, GetValues, GetNames, ToDictionary, ParseOrDefault, IsDefined, GetFlags
+			- New EasyAsync: RetryAsync (with exponential backoff), WithTimeout, SafeFireAndForget, WhenAllLimited
+			- New EasyValidation: IsValidUrl, IsValidIPv4, IsValidIPAddress, IsValidCreditCard (Luhn), IsStrongPassword, IsAlphanumeric, IsNumeric, IsValidHexColor, IsValidPort, IsValidSlug, RequireNotNullOrWhiteSpace, RequireInRange
+		</PackageReleaseNotes>
+
+		<!-- Documentation -->
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
+		<NoWarn>$(NoWarn);1591</NoWarn>
+
+		<!-- NuGet Build Options -->
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<EmbedUntrackedSources>true</EmbedUntrackedSources>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+
+		<!-- Package Requirements -->
+		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+		<DevelopmentDependency>false</DevelopmentDependency>
+	</PropertyGroup>
+
+	<!-- Source Link Support -->
+	<ItemGroup>
+		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
+	</ItemGroup>
+
+	<!-- Include Files in NuGet Package -->
+	<ItemGroup>
+		<None Include="README.md" Pack="true" PackagePath="\" />
+		<None Include="SkyWebFramework.png" Pack="true" PackagePath="\" />
+		<None Include="CHANGELOG.md" Pack="true" PackagePath="\" Condition="Exists('CHANGELOG.md')" />
+		<None Include="LICENSE" Pack="true" PackagePath="\" Condition="Exists('LICENSE')" />
+	</ItemGroup>
+
+	<!-- Assembly Metadata -->
+	<PropertyGroup>
+		<AssemblyTitle>SkyWebFramework.Utilities</AssemblyTitle>
+		<AssemblyName>SkyWebFramework.Utilities</AssemblyName>
+		<RootNamespace>SkyWebFramework.Utilities</RootNamespace>
+		<NeutralLanguage>en-US</NeutralLanguage>
+	</PropertyGroup>
+
+</Project>

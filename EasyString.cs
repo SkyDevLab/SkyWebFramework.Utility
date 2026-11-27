@@ -415,7 +415,7 @@ namespace SkyWebFramework.Utility
             => string.IsNullOrWhiteSpace(input) ? defaultValue : input;
 
         /// <summary>
-        /// Sanitizes a file name by replacing invalid file name characters.
+        /// Sanitizes a file name by replacing invalid file name characters across Windows and Unix platforms.
         /// </summary>
         public static string SanitizeFileName(this string? fileName, char replacement = '_')
         {
@@ -423,7 +423,12 @@ namespace SkyWebFramework.Utility
             var invalidChars = System.IO.Path.GetInvalidFileNameChars();
             var sb = new StringBuilder(fileName.Length);
             foreach (var ch in fileName)
-                sb.Append(Array.IndexOf(invalidChars, ch) >= 0 ? replacement : ch);
+            {
+                bool isInvalid = ch < 32
+                    || ch is '<' or '>' or ':' or '"' or '/' or '\\' or '|' or '?' or '*'
+                    || Array.IndexOf(invalidChars, ch) >= 0;
+                sb.Append(isInvalid ? replacement : ch);
+            }
             return sb.ToString().Trim();
         }
 
